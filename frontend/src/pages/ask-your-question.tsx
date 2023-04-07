@@ -10,7 +10,7 @@ export default function AskYourQuestion() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const response = await fetch(`https://be.blbyotazky.cz/questions/ask/`, {
+    const response = await fetch(`https://be.blbyotazky.cz/api/questions/ask`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
