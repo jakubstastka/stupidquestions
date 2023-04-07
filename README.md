@@ -4,6 +4,9 @@ Keep on keeping on!
 
 ## Frontend
 
+> npm run dev
+- for local development
+
 ### pm2 related commands
 
 > pm2 list
@@ -17,3 +20,7 @@ Keep on keeping on!
 
 > pm2 start npm --name app1 -- run start -- -p 3000
 - runs the frontend app with the name "app1"
+
+## Backend
+> ./manage.py runserver --settings=settings.local
+- for local development
