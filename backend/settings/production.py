@@ -30,5 +30,5 @@ DEBUG = False
 ALLOWED_HOSTS = ['api.blbyotazky.cz']
 
 CORS_ORIGIN_WHITELIST = [
-        'api.blbyotazky.cz',
+        'https://api.blbyotazky.cz',
     ]
