@@ -31,7 +31,7 @@ export default function QuestionPage({ question }: QuestionPageProps) {
 
 export const getServerSideProps: GetServerSideProps<QuestionPageProps> = async (context) => {
   const { id } = context.query;
-  const res = await fetch(`http://localhost:8000/api/questions/${id}/`);
+  const res = await fetch(`${process.env.API_URL}/questions/${id}/`);
   const question = await res.json();
 
   return {

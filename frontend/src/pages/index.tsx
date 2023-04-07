@@ -38,7 +38,7 @@ const Questions: NextPage<QuestionsProps> = ({ questions }) => {
 };
 
 export const getServerSideProps: GetServerSideProps<QuestionsProps> = async () => {
-  const res = await fetch('http://localhost:8000/api/questions/');
+  const res = await fetch(`${process.env.API_URL}/questions`);
   const questions: Question[] = await res.json();
 
   return {
