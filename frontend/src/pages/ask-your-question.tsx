@@ -1,17 +1,16 @@
 import { useState } from 'react';
 
-const apiUrl = process.env.API_URL
+// const apiUrl = process.env.API_URL
 
 export default function AskYourQuestion() {
   const [question, setQuestion] = useState('');
   const [isFormSent, setIsFormSent] = useState(false);
 
-  console.log("API URL", process.env.API_URL);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const response = await fetch(`${apiUrl}/questions/ask/`, {
+    const response = await fetch(`https://be.blbyotazky.cz/questions/ask/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
