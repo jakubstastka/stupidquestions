@@ -7,7 +7,7 @@ export default function AskYourQuestion() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const response = await fetch('http://localhost:8000/api/questions/ask', {
+    const response = await fetch(`${process.env.API_URL}/questions/ask/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
