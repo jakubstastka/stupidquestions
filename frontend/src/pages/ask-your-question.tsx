@@ -1,16 +1,19 @@
 import { useState } from 'react';
 
-// const apiUrl = process.env.API_URL
+const apiUrl = process.env.API_URL
 
 export default function AskYourQuestion() {
   const [question, setQuestion] = useState('');
   const [isFormSent, setIsFormSent] = useState(false);
 
+  console.log("api url", apiUrl)
+
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const response = await fetch(`https://be.blbyotazky.cz/api/questions/ask`, {
+
+    const response = await fetch(`${apiUrl}/questions/ask`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,10 +26,12 @@ export default function AskYourQuestion() {
     } else {
       // Error handling
     }
+
   };
+  
 
   return (
-    <div className='flex flex-col items-center justify-center pt-10 space-y-3'>
+    <div className='flex flex-col items-center justify-center pt-10 space-y-3 p-3'>
       <div className='text-2xl text-yellow-600'>Položte svoji blbou otázku!</div>
       {!isFormSent && (
         <form onSubmit={handleSubmit}>

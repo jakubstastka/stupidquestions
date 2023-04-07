@@ -22,7 +22,7 @@ export default function QuestionPage({ question }: QuestionPageProps) {
   const { id } = router.query;
 
   return (
-    <div className='px-44 pt-10 space-y-3'>
+    <div className='p-3 md:px-44 pt-10 space-y-3'>
         <div className='text-xl text-yellow-800'>{question.question}</div>
         <div className='text-yellow-700'>{question.answer}</div>
     </div>
