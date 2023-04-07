@@ -27,8 +27,9 @@ DATABASES = {
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['api.blbyotazky.cz']
+ALLOWED_HOSTS = ['be.blbyotazky.cz']
 
 CORS_ORIGIN_WHITELIST = [
-        'https://api.blbyotazky.cz',
+        'https://blbyotazky.cz',
+        'https://www.blbyotazky.cz',
     ]
