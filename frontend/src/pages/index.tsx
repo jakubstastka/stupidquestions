@@ -8,6 +8,7 @@ interface Question {
   created: string;
   question: string;
   answer: string;
+  score: number;
 }
 
 interface QuestionsProps {
@@ -26,7 +27,8 @@ const Questions: NextPage<QuestionsProps> = ({ questions }) => {
                     <div>{question.question}</div>
                   </div>
                   <div className='text-gray-500 text-sm font-thin'>
-                    Přidáno: {format(new Date(question.created), 'd. M. yyyy')}
+                    <div>Přidáno: {format(new Date(question.created), 'd. M. yyyy')}</div>
+                    <div>Skóre: {question.score}</div>
                   </div>
                 </div>
               </Link>

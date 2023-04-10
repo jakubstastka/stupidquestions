@@ -4,6 +4,7 @@ from .views import (
     StupidQuestionItemCreateView,
     StupidQuestionItemDetailView,
     StupidQuestionItemListView,
+    StupidQuestionItemUpdateScoreView,
 )
 
 urlpatterns = [
@@ -12,6 +13,11 @@ urlpatterns = [
         "questions/<uuid:pk>/",
         StupidQuestionItemDetailView.as_view(),
         name="question-detail",
+    ),
+    path(
+        "questions/<uuid:pk>/score",
+        StupidQuestionItemUpdateScoreView.as_view(),
+        name="question-score-update",
     ),
     path("questions/ask", StupidQuestionItemCreateView.as_view(), name="question-ask"),
 ]

@@ -16,6 +16,7 @@ class CreatedUpdatedBaseModel(models.Model):
 class StupidQuestionItem(CreatedUpdatedBaseModel):
     question = models.TextField()
     answer = models.TextField()
+    score = models.SmallIntegerField(default=0)
     published = models.BooleanField(default=False)
 
     def __str__(self):
